@@ -7,7 +7,7 @@
 
 </head>
 <body>
-    <label for="cssfile" style="display: inline-block; width: 200px;">Client css file:</label>
+    <<!--label for="cssfile" style="display: inline-block; width: 200px;">Client css file:</label>
     <input type="text" style="width: 600px;" id="cssfile" name="cssfile"><br><br>
     <script type="text/javascript" src="js/read_csv_file.js"></script>
     <input type="file" onchange="selectFile(document, this.files)" accept=".csv">
@@ -28,6 +28,28 @@
         <label for="cheight">Height (cms):</label>
         <input type="text" id="cheight" name="cheight"><br><br>
         <input type="submit" value="Add client">
-    </form>
+    </form>-->
+    <div class="container">
+        <header class="header">
+            This site is good
+        </header>
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Subscribe to our mailing list!</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <button class="btn brn-lg btn-promary btn-block" type="submit">Subscribe</button>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey:"AIzaSyDXOfrSTn9j5h00h-WyZENljHJ4xI_xgFQ",
+            authDomain:"mylesdb-951fa.firebaseio.com",
+            storageBucket:"https://console.firebase.google.com/project/mylesdb-951fa/storage/mylesdb-951fa.appspot.com/files",
+            messagingSenderId:"DONTKNOW"
+            };
+        firebase.initializeApp(config);
+    </script>
+
 </body>
 </html>
