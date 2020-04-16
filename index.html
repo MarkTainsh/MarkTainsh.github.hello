@@ -2,11 +2,32 @@
 <html>
 <head>
     <title>Process CSV</title>
+    <link rel="stylesheet" href="./resources/css/index.css">
 
 
 </head>
 <body>
     <label for="cssfile" style="display: inline-block; width: 200px;">Client css file:</label>
     <input type="text" style="width: 600px;" id="cssfile" name="cssfile"><br><br>
-    </body>
-    </html>
+    <script type="text/javascript" src="js/read_csv_file.js"></script>
+    <input type="file" onchange="selectFile(document, this.files)" accept=".csv">
+    <br />
+    <br />
+    <form action="javascript:showClients(document)">
+        <input type="submit" value="Display client info">
+    </form>
+    <br />
+    <br />
+    <form action="javascript:addClient(document)">
+        <label for="cname">Name:</label>
+        <input type="text" id="cname" name="cname"><br><br>
+        <label for="cage">Age:</label>
+        <input type="text" id="cage" name="cage"><br><br>
+        <label for="cweight">Weight (kgs):</label>
+        <input type="text" id="cweight" name="cweight"><br><br>
+        <label for="cheight">Height (cms):</label>
+        <input type="text" id="cheight" name="cheight"><br><br>
+        <input type="submit" value="Add client">
+    </form>
+</body>
+</html>
